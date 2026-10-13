@@ -28,7 +28,7 @@ dependencies = ["numpy>=1.23", "Pillow>=10"]
 models = ["ultralytics>=8.4"]
 test = ["coverage[toml]>=7"]
 docs = ["mkdocs>=1.6,<2", "mkdocs-material>=9.5"]
-dev = ["visin-infer[test,docs]", "ruff>=0.16.9,<0.17", "mypy>=1.10", "build>=1", "twine>=6.1", "pre-commit>=3.5"]
+dev = ["visin-infer[test,docs]", "ruff>=0.16.9,<0.18", "mypy>=1.10", "build>=1", "twine>=6.1", "pre-commit>=3.5"]
 
 [project.scripts]
 visin-infer = "visin_infer.cli:main"

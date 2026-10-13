@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/visin-platform/visin-inference/security/advisories/new
+    about: Report vulnerabilities privately.
+  - name: Visin app
+    url: https://github.com/visin-platform/visin/issues
+    about: Report problems with the editor or platform here.

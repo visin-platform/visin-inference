@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visin-infer"
+dynamic = ["version"]
+description = "Local detection and SAM segmentation for the Visin label editor"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+keywords = ["visin", "computer-vision", "inference", "yolo", "sam", "annotation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = ["numpy>=1.23", "Pillow>=10"]
+
+[project.optional-dependencies]
+models = ["ultralytics>=8.4"]
+test = ["coverage>=7"]
+docs = ["mkdocs>=1.6,<2", "mkdocs-material>=9.5"]
+dev = ["visin-infer[test,docs]", "ruff>=0.16.9,<0.17", "mypy>=1.10", "build>=1", "twine>=6.1", "pre-commit>=3.5"]
+
+[project.scripts]
+visin-infer = "visin_infer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/visin-platform/visin-inference"
+Source = "https://github.com/visin-platform/visin-inference"
+Issues = "https://github.com/visin-platform/visin-inference/issues"
+Documentation = "https://visin-platform.github.io/visin-inference/"
+Changelog = "https://github.com/visin-platform/visin-inference/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+packages = ["visin_infer"]
+
+[tool.setuptools.dynamic]
+version = {attr = "visin_infer.__version__"}
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["visin_infer"]
+check_untyped_defs = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["torch.*", "ultralytics.*"]
+ignore_missing_imports = true
+follow_imports = "skip"
+
+[tool.coverage.run]
+source = ["visin_infer"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+skip_covered = true

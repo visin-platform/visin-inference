@@ -1,0 +1,17 @@
+name: Bug report
+description: Report an inference server problem.
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: What happened and how to reproduce it
+      description: Include expected behavior and a minimal example. Remove tokens and private images.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Package/Python/OS versions, GPU and PyTorch version, startup options, model names.
+    validations:
+      required: true

@@ -1,0 +1,6 @@
+*
+!pyproject.toml
+!README.md
+!LICENSE
+!visin_infer/
+!visin_infer/*.py

@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+# Model weights are downloaded on first start into the working directory.
+*.pt
+*.onnx
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage
+coverage.xml
+site/
+.env
+.env.*
+!.env.example
+runs/

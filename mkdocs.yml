@@ -1,0 +1,26 @@
+site_name: visin-infer
+site_description: Local object detection and click-to-segment for Visin.
+site_url: https://visin-platform.github.io/visin-inference/
+repo_url: https://github.com/visin-platform/visin-inference
+repo_name: visin-platform/visin-inference
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  features: [content.code.copy, navigation.footer]
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Configuration: configuration.md
+  - HTTP protocol: protocol.md
+  - Architecture: architecture.md
+  - Contributing: contributing.md
+  - Releases: releases.md
+  - Security: security.md
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      check_paths: true
+plugins: [search]

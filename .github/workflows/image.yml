@@ -1,0 +1,16 @@
+name: Container build
+on:
+  pull_request:
+    paths: [Dockerfile, .dockerignore, pyproject.toml, 'visin_infer/**', .github/workflows/image.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Build GPU image (no model downloads)
+        run: docker build --tag visin-infer:check .
+      - name: Check container entry point
+        run: docker run --rm visin-infer:check --help

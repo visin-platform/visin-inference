@@ -11,9 +11,12 @@
    is available or that you control the existing project. No API token is needed.
 3. Set GitHub Pages source to **GitHub Actions**. Enable private vulnerability
    reporting. Configure branch protection to require the CI jobs.
-4. Confirm the existing AGPL-3.0-only license and rights to distribute all source
+4. Confirm the MIT license and rights to distribute all source
    contributions. Check dependency and model-weight license terms for your use.
-   Model weights and local secrets are excluded from distributions.
+   Model weights and local secrets are excluded from distributions. The optional
+   Ultralytics backend and the Docker image's model dependency remain subject to
+   [Ultralytics licensing](https://www.ultralytics.com/license) (AGPL-3.0 or Enterprise);
+   the MIT license on our source does not replace these terms.
 
 Trusted publishing follows the [PyPI guide](https://docs.pypi.org/trusted-publishers/using-a-publisher/).
 These account settings cannot be configured by checking in workflow files.

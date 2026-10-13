@@ -95,5 +95,11 @@ The documentation site is published through GitHub Pages after repository setup.
 
 ## License
 
-[AGPL-3.0-only](LICENSE). Dependencies and downloaded model weights have their
-own license terms. No model weights are bundled in the package.
+[MIT](LICENSE), matching the other Visin repositories. This license covers this
+repository's source code. Dependencies and downloaded model weights retain their
+own licenses; no model weights are bundled in the package.
+
+The optional Ultralytics backend uses a dependency available under AGPL-3.0 or
+an Enterprise license. Installing the `models` extra or using the Docker image
+does not remove those obligations. See [Ultralytics licensing](https://www.ultralytics.com/license)
+before distributing or deploying an application using that backend.

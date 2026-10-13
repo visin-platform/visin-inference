@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- License repository source under MIT, matching the other Visin repositories; retain third-party dependency license notices.
+
 - Add offline cross-platform CI, Ruff, Mypy, coverage reporting and pre-commit hooks.
 - Add strict documentation builds and GitHub Pages deployment.
 - Add tag-validated PyPI releases and manual TestPyPI rehearsals using trusted publishing.

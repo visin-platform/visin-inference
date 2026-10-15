@@ -2,7 +2,7 @@
 # Only the fast checks: the tests and mypy run in `make check` and in CI.
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.9
+    rev: v0.17.1
     hooks:
       - id: ruff-check
         args: [--fix]
